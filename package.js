@@ -3,7 +3,9 @@ var fs = Npm.require('fs'),
   path = Npm.require('path');
 
 Package.describe({
-  summary: 'CucumberJS test runner and Velocity reporter'
+  summary: 'CucumberJS test runner and Velocity reporter',
+  version: "0.0.2",
+  git: "https://github.com/xdissent/meteor-cucumber.git"
 });
 
 Npm.depends({
@@ -13,10 +15,11 @@ Npm.depends({
 });
 
 Package.on_use(function (api) {
+  api.versionsFrom("METEOR@0.9.0");
   api.use(['underscore', 'coffeescript'], 'server');
 
   api.use('webapp', 'server', {weak: true});
-  api.use('mirror', 'server');
+  api.use("xdissent:mirror@0.0.2", 'server');
 
   // https://github.com/meteor/meteor/issues/1358
   if (fs.existsSync(path.join(process.env.PWD, 'packages', 'velocity'))) {
