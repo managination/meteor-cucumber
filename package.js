@@ -4,7 +4,7 @@ var fs = Npm.require('fs'),
 
 Package.describe({
   summary: 'CucumberJS test runner and Velocity reporter',
-  version: "0.0.2",
+  version: "0.0.3",
   git: "https://github.com/xdissent/meteor-cucumber.git"
 });
 

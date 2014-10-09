@@ -7,7 +7,7 @@ standard-app-packages
 autopublish
 insecure
 coffeescript
-cucumber
-cucumber-selenium
-cucumber-protractor
-velocity
+velocity:core
+velocity:html-reporter
+mng-cucumber
+
